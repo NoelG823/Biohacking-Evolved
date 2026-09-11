@@ -629,3 +629,48 @@ route=function(){
   if(p.path==='/future') return futureHub();
   return _iaRoute();
 };
+
+/* ---- IA navigation hardening · 2026-09-10 ----
+   The legacy prototype registered multiple hashchange handlers before later route wrappers.
+   Primary editorial hubs now use a direct navigation layer so Science, Evolution and Future
+   always render as standalone views rather than falling through to legacy home/article routes.
+*/
+(function(){
+  const HUBS={
+    '/science': scienceHub,
+    '/evolution': evolutionHub,
+    '/future': futureHub
+  };
+  function renderHubPath(path, updateHistory){
+    const fn=HUBS[path];
+    if(!fn) return false;
+    if(updateHistory && location.hash !== '#'+path){
+      history.pushState({biohackingHub:path}, '', '#'+path);
+    }
+    fn();
+    window.scrollTo(0,0);
+    return true;
+  }
+  document.addEventListener('click', function(e){
+    const a=e.target.closest('a');
+    if(!a) return;
+    let href=a.getAttribute('href')||'';
+    const label=(a.textContent||'').trim().replace(/\s+/g,' ');
+    let path=null;
+    if(href==='#/science' || label==='The Science') path='/science';
+    else if(href==='#/evolution' || label==='The Evolution') path='/evolution';
+    else if(href==='#/future' || label==="What’s Next" || label==="What's Next") path='/future';
+    if(!path) return;
+    e.preventDefault();
+    e.stopPropagation();
+    renderHubPath(path,true);
+  }, true);
+  window.addEventListener('popstate', function(){
+    const p=parseHash().path;
+    if(HUBS[p]) renderHubPath(p,false);
+  });
+  document.addEventListener('DOMContentLoaded', function(){
+    const p=parseHash().path;
+    if(HUBS[p]) setTimeout(()=>renderHubPath(p,false),0);
+  });
+})();
