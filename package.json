@@ -1,0 +1,14 @@
+{
+  "name": "biohacking-evolved",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production repository for BIOHACKING. EVOLVED.",
+  "scripts": {
+    "check": "node scripts/check.js",
+    "dev": "wrangler dev",
+    "deploy": "npm run check && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
