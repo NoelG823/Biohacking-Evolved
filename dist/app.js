@@ -674,3 +674,29 @@ route=function(){
     if(HUBS[p]) setTimeout(()=>renderHubPath(p,false),0);
   });
 })();
+
+/* ---- 2026-09-11 authoritative editorial hub router ----
+   This runs after all legacy prototype wrappers. It is intentionally small:
+   the three primary editorial hubs are resolved first, and every other route
+   continues through the existing production router.
+*/
+window.BIOHACKING_BUILD='2026-09-11-routing-reset';
+(function(){
+  const existingRoute = route;
+  route = function(){
+    const p = parseHash();
+    if(p.path === '/science') return scienceHub();
+    if(p.path === '/evolution') return evolutionHub();
+    if(p.path === '/future') return futureHub();
+    return existingRoute();
+  };
+
+  // Use one late listener tied to the final router. Legacy listeners may still
+  // fire, but this listener runs afterward and therefore owns the final view.
+  window.addEventListener('hashchange', function(){ route(); });
+
+  // On a direct load such as /#/science, make the final router the last render.
+  document.addEventListener('DOMContentLoaded', function(){
+    setTimeout(function(){ route(); }, 25);
+  });
+})();
