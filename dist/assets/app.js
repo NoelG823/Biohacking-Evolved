@@ -573,3 +573,34 @@ function v20Verification(){show('ledgerView');const rows=V20_VERIFIED.map(slug=>
 const _v20Route=route;route=function(){const p=parseHash();if(p.path==='/verification')return v20Verification();return _v20Route()};
 document.addEventListener('DOMContentLoaded',()=>{const foot=document.querySelector('.footer-grid');if(foot&&!foot.querySelector('a[href="#/verification"]')){const a=document.createElement('a');a.href='#/verification';a.textContent='Editorial Verification';foot.appendChild(a)};const lr=[...document.querySelectorAll('a[href="#/launch-readiness"]')];});
 
+
+
+/* ---- Production QA patch · Goals landing page ---- */
+function renderGoalsIndex(){
+  show('goalView');
+  const subtitles={
+    'Recovery':'Repair. Restore. Move.',
+    'Metabolic Health':'Energy. Weight. Insulin.',
+    'Muscle & Performance':'Build. Endure. Perform.',
+    'Longevity':'Healthspan. Lifespan.',
+    'Cognition':'Focus. Clarity. Mood.',
+    'Gut Health':'Digest. Absorb. Thrive.',
+    'Sleep':'Rest. Recover. Reset.'
+  };
+  const descriptions={
+    'Recovery':'Explore tissue repair, inflammation, pain signaling and return-to-function evidence.',
+    'Metabolic Health':'Explore weight regulation, insulin signaling, appetite biology and body-composition evidence.',
+    'Muscle & Performance':'Explore strength, recovery capacity, mitochondrial output and body-composition research.',
+    'Longevity':'Explore healthspan, mitochondrial biology, aging pathways and the gap between promise and proof.',
+    'Cognition':'Explore focus, stress, mood and cognitive-performance research.',
+    'Gut Health':'Explore GI integrity, inflammatory signaling and digestive-health evidence.',
+    'Sleep':'Explore sleep quality, circadian biology and recovery-related evidence.'
+  };
+  el('goalView').innerHTML=`<section class="inner-hero"><div class="wrap"><a class="back" href="#/home">← Home</a><div class="kicker">Outcome intelligence</div><h1>Start with the outcome.</h1><p class="dek">Choose the result you care about first. Each hub starts with the biology, separates human evidence from early research, and then shows which compounds are actually relevant.</p></div></section><section class="section"><div class="wrap"><div class="section-head"><div><div class="kicker">Explore by outcome</div><h2>Seven ways into the science.</h2></div><p class="intro">No ranked “best peptide” lists. Start with the biological outcome, then follow the evidence.</p></div><div class="goals">${goals.map(g=>`<a class="goal" href="#/goals/${encodeURIComponent(g)}"><div class="kicker">Outcome hub</div><h3>${safe(g)}</h3><span>${safe(subtitles[g]||'Explore the evidence.')}</span><p style="margin-top:12px;color:var(--muted);font-size:14px;line-height:1.55">${safe(descriptions[g]||'Explore the evidence landscape for this outcome.')}</p><b style="display:block;margin-top:18px;font-size:13px">Open hub →</b></a>`).join('')}</div></div></section>`;
+}
+const _goalsLandingRoute=route;
+route=function(){
+  const p=parseHash();
+  if(p.path==='/goals') return renderGoalsIndex();
+  return _goalsLandingRoute();
+};
