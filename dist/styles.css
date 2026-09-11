@@ -157,3 +157,14 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid curre
 .timeline-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.timeline-grid article{border-top:3px solid var(--ink);background:#f4eee4;padding:22px;min-height:220px}
 @media(max-width:1050px){.ia-card-grid.four{grid-template-columns:1fr 1fr}.ia-card-grid.three,.timeline-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.ia-card-grid.four,.ia-card-grid.three,.timeline-grid,.ia-split{grid-template-columns:1fr}.ia-row{display:block}.ia-row b{display:block;text-align:left;margin-top:5px}.ia-hero{padding:58px 0 42px}}
+
+
+/* Beehiiv newsletter integration · September 2026 */
+#newsletter{scroll-margin-top:90px}
+#newsletter .wrap{max-width:920px;text-align:center}
+.newsletter-kicker{font:700 11px/1.2 Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#7a817f;margin-bottom:14px}
+.newsletter-quote{font-size:clamp(26px,4vw,48px);line-height:1.08;letter-spacing:-.025em}
+.newsletter-dek{max-width:650px;margin:16px auto 0;color:#5f6868;font-size:16px;line-height:1.6}
+.beehiiv-embed-shell{max-width:620px;margin:26px auto 0;min-height:58px}
+.newsletter-noscript{font-size:13px;color:#6b7372;margin-top:14px}
+@media(max-width:680px){.beehiiv-embed-shell{max-width:100%;margin-top:20px}.newsletter-dek{font-size:15px}}
