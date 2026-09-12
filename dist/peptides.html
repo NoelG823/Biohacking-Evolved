@@ -87,6 +87,11 @@ h1{font:700 clamp(62px,9vw,122px)/.84 var(--serif);letter-spacing:-.065em;margin
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px}.filter{border:1px solid rgba(31,31,29,.22);background:transparent;border-radius:999px;padding:9px 14px;font:inherit;font-size:12px;letter-spacing:.04em;cursor:pointer}.filter:hover,.filter.active{background:#20201e;color:#f3eee3;border-color:#20201e}
 .index-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.idx-card{position:relative;border:1px solid rgba(31,31,29,.18);padding:25px;background:rgba(255,255,255,.18);transition:transform .18s ease,box-shadow .18s ease}.idx-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.07)}.idx-top{display:flex;justify-content:space-between;gap:15px;align-items:start}.idx-name{font-family:Georgia,serif;font-size:29px;line-height:1}.idx-arrow{font-size:20px}.idx-deck{min-height:62px;font-size:14px;line-height:1.55;opacity:.76}.idx-verdict{font-family:Georgia,serif;font-size:18px;line-height:1.25;margin:20px 0}.idx-metrics{border-top:1px solid rgba(31,31,29,.16);border-bottom:1px solid rgba(31,31,29,.16);padding:13px 0;display:grid;gap:8px}.idx-metrics div{display:flex;justify-content:space-between;gap:20px;font-size:11px;text-transform:uppercase;letter-spacing:.06em}.idx-metrics b{font-size:12px;letter-spacing:.03em}.gaptext{font-size:10px!important}.idx-foot{display:flex;justify-content:space-between;gap:20px;padding-top:14px;font-size:10px;text-transform:uppercase;letter-spacing:.06em;opacity:.68}.idx-link{position:absolute;inset:0;z-index:2}.idx-card.hidden{display:none}
 @media(max-width:760px){.index-grid{grid-template-columns:1fr}.index-head{display:block}.index-head p{margin-top:12px}.idx-deck{min-height:auto}.idx-foot{display:grid;gap:6px}}
+
+.full-library-section{background:rgba(255,255,255,.12)}
+.library-tools{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 20px;align-items:end;margin:24px 0 18px}.library-search-label{grid-column:1/-1;font-size:10px;text-transform:uppercase;letter-spacing:.12em;opacity:.65}.library-search{width:100%;border:0;border-bottom:1px solid rgba(31,31,29,.35);background:transparent;padding:10px 0 12px;font:inherit;font-size:18px;outline:none}.library-search:focus{border-bottom-color:#20201e}.library-count{font-size:11px;text-transform:uppercase;letter-spacing:.08em;opacity:.6;padding-bottom:12px;white-space:nowrap}
+.library-head,.library-main{display:grid;grid-template-columns:1.05fr 1.45fr .9fr 1.15fr auto;gap:18px;align-items:center}.library-head{padding:10px 16px;border-bottom:1px solid rgba(31,31,29,.32);font-size:9px;text-transform:uppercase;letter-spacing:.1em;opacity:.55}.library-row{border-bottom:1px solid rgba(31,31,29,.14)}.library-main{padding:16px;text-decoration:none;color:inherit;transition:background .15s ease}.library-main:hover{background:rgba(255,255,255,.3)}.library-name{font-family:Georgia,serif;font-size:20px}.library-cat,.library-status{font-size:11px;line-height:1.4;opacity:.72}.library-human{display:flex;flex-direction:column;gap:4px}.library-human span{font-size:8px;text-transform:uppercase;letter-spacing:.08em;opacity:.5}.library-human b{font-size:11px;letter-spacing:.04em}.library-open{font-size:10px;text-transform:uppercase;letter-spacing:.07em;white-space:nowrap}.library-row.hidden{display:none}.library-empty{padding:28px 16px;border-bottom:1px solid rgba(31,31,29,.14);font-family:Georgia,serif;font-size:20px}.library-note{margin-top:22px;padding:17px;border-left:2px solid #20201e;font-size:12px;line-height:1.6;max-width:900px}
+@media(max-width:840px){.library-head{display:none}.library-main{grid-template-columns:1fr auto;gap:8px 15px}.library-name{grid-column:1}.library-open{grid-column:2;grid-row:1}.library-cat,.library-status,.library-human{grid-column:1/-1}.library-human{flex-direction:row;justify-content:space-between;border-top:1px solid rgba(31,31,29,.1);padding-top:8px}.library-tools{grid-template-columns:1fr}.library-count{padding-bottom:0}}
 </style>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"The Peptide Index","url":"https://biohackingevolved.com/peptides.html","description":"A living evidence map of peptides discussed in biohacking, comparing human evidence, community signal, evidence gaps, outcomes and regulatory status.","isPartOf":{"@type":"WebSite","name":"BIOHACKING. EVOLVED.","url":"https://biohackingevolved.com/"}}</script>
@@ -119,8 +124,8 @@ h1{font:700 clamp(62px,9vw,122px)/.84 var(--serif);letter-spacing:-.065em;margin
 </div></div></section>
 
 <section class="section"><div class="wrap">
-<div class="num">01 / EXPLORE THE INDEX</div>
-<div class="index-head"><h2>Compare the signals.</h2><p>Seven profiles. Five dimensions. One consistent question: <strong>how closely does the reputation match the evidence?</strong></p></div>
+<div class="num">01 / DEEP-DIVE EVIDENCE PROFILES</div>
+<div class="index-head"><h2>Seven flagship profiles.</h2><p>Our fully researched, source-backed deep dives. Compare Human Evidence, Community Signal, The Gap, outcome and regulatory status using one consistent editorial framework.</p></div>
 <div class="filters" role="group" aria-label="Filter peptide profiles">
 <button class="filter active" data-filter="all">All 7</button>
 <button class="filter" data-filter="human">Strong Human Evidence</button>
@@ -217,8 +222,467 @@ h1{font:700 clamp(62px,9vw,122px)/.84 var(--serif);letter-spacing:-.065em;margin
     </article></div>
 </div></section>
 
+
+<section class="section full-library-section"><div class="wrap">
+<div class="num">02 / FULL PEPTIDE INDEX</div>
+<div class="index-head">
+  <h2>Explore the broader library.</h2>
+  <p><strong>51 peptides tracked.</strong> The seven flagship profiles above are our deepest evidence reviews. The additional 44 entries remain available while we progressively upgrade them into full Evidence Profiles.</p>
+</div>
+<div class="library-tools">
+  <label class="library-search-label" for="librarySearch">Search the Index</label>
+  <input id="librarySearch" class="library-search" type="search" placeholder="Search peptide, outcome or status…" autocomplete="off">
+  <div class="library-count"><span id="libraryVisible">44</span> additional Index entries</div>
+</div>
+<div class="library-head" aria-hidden="true">
+  <span>Peptide</span><span>Primary areas</span><span>Human evidence</span><span>Status</span><span></span>
+</div>
+<div class="library-list" id="libraryList">
+<article class="library-row" data-search="abaloparatide bone health · regenerative medicine fda-approved peptide drug" data-human="5">
+  <a href="/#/peptide/abaloparatide" class="library-main">
+    <div class="library-name">Abaloparatide</div>
+    <div class="library-cat">Bone Health · Regenerative Medicine</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">FDA-approved peptide drug</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="aod-9604 metabolic health · fat metabolism investigational" data-human="2">
+  <a href="/#/peptide/aod-9604" class="library-main">
+    <div class="library-name">AOD-9604</div>
+    <div class="library-cat">Metabolic Health · Fat Metabolism</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●○○○</b></div>
+    <div class="library-status">Investigational</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="bremelanotide (pt-141) sexual health · melanocortin signaling fda-approved drug for a specific indication" data-human="5">
+  <a href="/#/peptide/bremelanotide" class="library-main">
+    <div class="library-name">Bremelanotide (PT-141)</div>
+    <div class="library-cat">Sexual Health · Melanocortin Signaling</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">FDA-approved drug for a specific indication</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="cagrilintide metabolic health · weight management · amylin biology investigational" data-human="4">
+  <a href="/#/peptide/cagrilintide" class="library-main">
+    <div class="library-name">Cagrilintide</div>
+    <div class="library-cat">Metabolic Health · Weight Management · Amylin Biology</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●○</b></div>
+    <div class="library-status">Investigational</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="calcitonin (salmon) bone health · calcium regulation fda-approved peptide drug" data-human="5">
+  <a href="/#/peptide/calcitonin-salmon" class="library-main">
+    <div class="library-name">Calcitonin (salmon)</div>
+    <div class="library-cat">Bone Health · Calcium Regulation</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">FDA-approved peptide drug</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="cibinetide (ara-290) neuropathic pain · inflammation · tissue protection investigational" data-human="3">
+  <a href="/#/peptide/ara-290" class="library-main">
+    <div class="library-name">Cibinetide (ARA-290)</div>
+    <div class="library-cat">Neuropathic Pain · Inflammation · Tissue Protection</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●○○</b></div>
+    <div class="library-status">Investigational</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="cjc-1295 growth hormone axis · recovery · body composition investigational" data-human="2">
+  <a href="/#/peptide/cjc-1295" class="library-main">
+    <div class="library-name">CJC-1295</div>
+    <div class="library-cat">Growth Hormone Axis · Recovery · Body Composition</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●○○○</b></div>
+    <div class="library-status">Investigational</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="delta sleep-inducing peptide (dsip) sleep · stress · neurobiology experimental" data-human="1">
+  <a href="/#/peptide/dsip" class="library-main">
+    <div class="library-name">Delta Sleep-Inducing Peptide (DSIP)</div>
+    <div class="library-cat">Sleep · Stress · Neurobiology</div>
+    <div class="library-human"><span>Human Evidence</span><b>●○○○○</b></div>
+    <div class="library-status">Experimental</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="desmopressin fluid balance · hematology · vasopressin biology fda-approved peptide drug" data-human="5">
+  <a href="/#/peptide/desmopressin" class="library-main">
+    <div class="library-name">Desmopressin</div>
+    <div class="library-cat">Fluid Balance · Hematology · Vasopressin Biology</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">FDA-approved peptide drug</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="enfuvirtide antiviral therapy · hiv · fusion inhibition fda-approved peptide drug" data-human="5">
+  <a href="/#/peptide/enfuvirtide" class="library-main">
+    <div class="library-name">Enfuvirtide</div>
+    <div class="library-cat">Antiviral Therapy · HIV · Fusion Inhibition</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">FDA-approved peptide drug</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="epitalon longevity · sleep · aging biology investigational" data-human="1">
+  <a href="/#/peptide/epitalon" class="library-main">
+    <div class="library-name">Epitalon</div>
+    <div class="library-cat">Longevity · Sleep · Aging Biology</div>
+    <div class="library-human"><span>Human Evidence</span><b>●○○○○</b></div>
+    <div class="library-status">Investigational</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="exenatide metabolic health · diabetes · incretin biology fda-approved drug" data-human="5">
+  <a href="/#/peptide/exenatide" class="library-main">
+    <div class="library-name">Exenatide</div>
+    <div class="library-cat">Metabolic Health · Diabetes · Incretin Biology</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">FDA-approved drug</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="ghk-cu skin · tissue repair · healthy aging route-dependent / investigational" data-human="2">
+  <a href="/#/peptide/ghk-cu" class="library-main">
+    <div class="library-name">GHK-Cu</div>
+    <div class="library-cat">Skin · Tissue Repair · Healthy Aging</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●○○○</b></div>
+    <div class="library-status">Route-dependent / investigational</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="ghrp-2 growth hormone axis · appetite · recovery investigational / non-u.s. use" data-human="2">
+  <a href="/#/peptide/ghrp-2" class="library-main">
+    <div class="library-name">GHRP-2</div>
+    <div class="library-cat">Growth Hormone Axis · Appetite · Recovery</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●○○○</b></div>
+    <div class="library-status">Investigational / non-U.S. use</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="ghrp-6 growth hormone axis · appetite · recovery investigational" data-human="2">
+  <a href="/#/peptide/ghrp-6" class="library-main">
+    <div class="library-name">GHRP-6</div>
+    <div class="library-cat">Growth Hormone Axis · Appetite · Recovery</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●○○○</b></div>
+    <div class="library-status">Investigational</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="glp-1 (endogenous peptide) metabolic health · incretin biology endogenous hormone / drug target" data-human="5">
+  <a href="/#/peptide/glp-1" class="library-main">
+    <div class="library-name">GLP-1 (endogenous peptide)</div>
+    <div class="library-cat">Metabolic Health · Incretin Biology</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">Endogenous hormone / drug target</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="glp-2 gut health · intestinal biology endogenous hormone / therapeutic target" data-human="4">
+  <a href="/#/peptide/glp-2" class="library-main">
+    <div class="library-name">GLP-2</div>
+    <div class="library-cat">Gut Health · Intestinal Biology</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●○</b></div>
+    <div class="library-status">Endogenous hormone / therapeutic target</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="hexarelin growth hormone axis · cardiometabolic research investigational" data-human="2">
+  <a href="/#/peptide/hexarelin" class="library-main">
+    <div class="library-name">Hexarelin</div>
+    <div class="library-cat">Growth Hormone Axis · Cardiometabolic Research</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●○○○</b></div>
+    <div class="library-status">Investigational</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="humanin mitochondria · cellular stress · aging biology preclinical / early translational" data-human="1">
+  <a href="/#/peptide/humanin" class="library-main">
+    <div class="library-name">Humanin</div>
+    <div class="library-cat">Mitochondria · Cellular Stress · Aging Biology</div>
+    <div class="library-human"><span>Human Evidence</span><b>●○○○○</b></div>
+    <div class="library-status">Preclinical / early translational</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="ipamorelin growth hormone axis · recovery · sleep investigational / compounded use" data-human="2">
+  <a href="/#/peptide/ipamorelin" class="library-main">
+    <div class="library-name">Ipamorelin</div>
+    <div class="library-cat">Growth Hormone Axis · Recovery · Sleep</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●○○○</b></div>
+    <div class="library-status">Investigational / compounded use</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="kisspeptin-10 reproductive health · hormonal signaling investigational / compounded interest" data-human="3">
+  <a href="/#/peptide/kisspeptin-10" class="library-main">
+    <div class="library-name">Kisspeptin-10</div>
+    <div class="library-cat">Reproductive Health · Hormonal Signaling</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●○○</b></div>
+    <div class="library-status">Investigational / compounded interest</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="lanreotide endocrinology · neuroendocrine tumors · somatostatin fda-approved peptide drug" data-human="5">
+  <a href="/#/peptide/lanreotide" class="library-main">
+    <div class="library-name">Lanreotide</div>
+    <div class="library-cat">Endocrinology · Neuroendocrine Tumors · Somatostatin</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">FDA-approved peptide drug</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="leuprolide reproductive endocrinology · oncology · gnrh fda-approved peptide drug" data-human="5">
+  <a href="/#/peptide/leuprolide" class="library-main">
+    <div class="library-name">Leuprolide</div>
+    <div class="library-cat">Reproductive Endocrinology · Oncology · GnRH</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">FDA-approved peptide drug</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="linaclotide gut health · intestinal signaling fda-approved peptide drug" data-human="5">
+  <a href="/#/peptide/linaclotide" class="library-main">
+    <div class="library-name">Linaclotide</div>
+    <div class="library-cat">Gut Health · Intestinal Signaling</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">FDA-approved peptide drug</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="liraglutide metabolic health · diabetes · weight management fda-approved drugs exist" data-human="5">
+  <a href="/#/peptide/liraglutide" class="library-main">
+    <div class="library-name">Liraglutide</div>
+    <div class="library-cat">Metabolic Health · Diabetes · Weight Management</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">FDA-approved drugs exist</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="ll-37 innate immunity · antimicrobial research · wound biology investigational" data-human="1">
+  <a href="/#/peptide/ll-37" class="library-main">
+    <div class="library-name">LL-37</div>
+    <div class="library-cat">Innate Immunity · Antimicrobial Research · Wound Biology</div>
+    <div class="library-human"><span>Human Evidence</span><b>●○○○○</b></div>
+    <div class="library-status">Investigational</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="mazdutide metabolic health · weight management approved in some regions / not u.s.-approved" data-human="4">
+  <a href="/#/peptide/mazdutide" class="library-main">
+    <div class="library-name">Mazdutide</div>
+    <div class="library-cat">Metabolic Health · Weight Management</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●○</b></div>
+    <div class="library-status">Approved in some regions / not U.S.-approved</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="octreotide endocrinology · gi hormones · somatostatin fda-approved peptide drug" data-human="5">
+  <a href="/#/peptide/octreotide" class="library-main">
+    <div class="library-name">Octreotide</div>
+    <div class="library-cat">Endocrinology · GI Hormones · Somatostatin</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">FDA-approved peptide drug</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="oral semaglutide metabolic health · diabetes · oral peptide delivery fda-approved drug formulation" data-human="5">
+  <a href="/#/peptide/semaglutide-oral" class="library-main">
+    <div class="library-name">Oral Semaglutide</div>
+    <div class="library-cat">Metabolic Health · Diabetes · Oral Peptide Delivery</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">FDA-approved drug formulation</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="oxytocin reproductive medicine · social neurobiology fda-approved drug in obstetric settings" data-human="5">
+  <a href="/#/peptide/oxytocin" class="library-main">
+    <div class="library-name">Oxytocin</div>
+    <div class="library-cat">Reproductive Medicine · Social Neurobiology</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">FDA-approved drug in obstetric settings</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="pemvidutide metabolic health · weight management · liver health investigational" data-human="4">
+  <a href="/#/peptide/pemvidutide" class="library-main">
+    <div class="library-name">Pemvidutide</div>
+    <div class="library-cat">Metabolic Health · Weight Management · Liver Health</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●○</b></div>
+    <div class="library-status">Investigational</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="plecanatide gut health · intestinal fluid signaling fda-approved drug" data-human="5">
+  <a href="/#/peptide/plecanatide" class="library-main">
+    <div class="library-name">Plecanatide</div>
+    <div class="library-cat">Gut Health · Intestinal Fluid Signaling</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">FDA-approved drug</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="pramlintide metabolic health · amylin biology · diabetes fda-approved peptide drug" data-human="5">
+  <a href="/#/peptide/pramlintide" class="library-main">
+    <div class="library-name">Pramlintide</div>
+    <div class="library-cat">Metabolic Health · Amylin Biology · Diabetes</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">FDA-approved peptide drug</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="selank cognition · stress · mood investigational in u.s." data-human="2">
+  <a href="/#/peptide/selank" class="library-main">
+    <div class="library-name">Selank</div>
+    <div class="library-cat">Cognition · Stress · Mood</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●○○○</b></div>
+    <div class="library-status">Investigational in U.S.</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="semaglutide metabolic health · weight management fda-approved drugs exist" data-human="5">
+  <a href="/#/peptide/semaglutide" class="library-main">
+    <div class="library-name">Semaglutide</div>
+    <div class="library-cat">Metabolic Health · Weight Management</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">FDA-approved drugs exist</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="sermorelin growth hormone axis · recovery · body composition prescription peptide / historical fda product" data-human="3">
+  <a href="/#/peptide/sermorelin" class="library-main">
+    <div class="library-name">Sermorelin</div>
+    <div class="library-cat">Growth Hormone Axis · Recovery · Body Composition</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●○○</b></div>
+    <div class="library-status">Prescription peptide / historical FDA product</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="setmelanotide metabolic health · genetic obesity · melanocortin signaling fda-approved peptide drug" data-human="5">
+  <a href="/#/peptide/setmelanotide" class="library-main">
+    <div class="library-name">Setmelanotide</div>
+    <div class="library-cat">Metabolic Health · Genetic Obesity · Melanocortin Signaling</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">FDA-approved peptide drug</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="shlp-2 mitochondria · metabolism · aging biology preclinical / early translational" data-human="1">
+  <a href="/#/peptide/shlp-2" class="library-main">
+    <div class="library-name">SHLP-2</div>
+    <div class="library-cat">Mitochondria · Metabolism · Aging Biology</div>
+    <div class="library-human"><span>Human Evidence</span><b>●○○○○</b></div>
+    <div class="library-status">Preclinical / early translational</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="survodutide metabolic health · weight management · liver health investigational" data-human="4">
+  <a href="/#/peptide/survodutide" class="library-main">
+    <div class="library-name">Survodutide</div>
+    <div class="library-cat">Metabolic Health · Weight Management · Liver Health</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●○</b></div>
+    <div class="library-status">Investigational</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="teduglutide gut health · intestinal adaptation fda-approved drug" data-human="5">
+  <a href="/#/peptide/teduglutide" class="library-main">
+    <div class="library-name">Teduglutide</div>
+    <div class="library-cat">Gut Health · Intestinal Adaptation</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">FDA-approved drug</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="teriparatide bone health · regenerative medicine fda-approved peptide drug" data-human="5">
+  <a href="/#/peptide/teriparatide" class="library-main">
+    <div class="library-name">Teriparatide</div>
+    <div class="library-cat">Bone Health · Regenerative Medicine</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">FDA-approved peptide drug</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="thymosin alpha-1 immune function · inflammation · host defense approved in some countries / investigational in u.s." data-human="3">
+  <a href="/#/peptide/thymosin-alpha-1" class="library-main">
+    <div class="library-name">Thymosin Alpha-1</div>
+    <div class="library-cat">Immune Function · Inflammation · Host Defense</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●○○</b></div>
+    <div class="library-status">Approved in some countries / investigational in U.S.</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="tirzepatide metabolic health · diabetes · weight management fda-approved drugs exist" data-human="5">
+  <a href="/#/peptide/tirzepatide" class="library-main">
+    <div class="library-name">Tirzepatide</div>
+    <div class="library-cat">Metabolic Health · Diabetes · Weight Management</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">FDA-approved drugs exist</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article>
+
+<article class="library-row" data-search="ziconotide pain · neurobiology · ion channels fda-approved peptide drug" data-human="5">
+  <a href="/#/peptide/ziconotide" class="library-main">
+    <div class="library-name">Ziconotide</div>
+    <div class="library-cat">Pain · Neurobiology · Ion Channels</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●●</b></div>
+    <div class="library-status">FDA-approved peptide drug</div>
+    <div class="library-open">View Index Entry →</div>
+  </a>
+</article></div>
+<div class="library-empty" id="libraryEmpty" hidden>No Index entries match that search.</div>
+<div class="library-note"><strong>Why two levels?</strong> Every compound stays discoverable in the Index. Deep-Dive Evidence Profiles are the entries that have completed our more intensive source review, Claim vs Evidence analysis, Community Signal comparison, Evidence Ledger and regulatory verification.</div>
+</div></section>
+
 <section class="section"><div class="wrap section-grid">
-<div><div class="num">02 / WHAT THE SCORES MEAN</div><h2>Evidence maturity, not a leaderboard.</h2></div>
+<div><div class="num">03 / WHAT THE SCORES MEAN</div><h2>Evidence maturity, not a leaderboard.</h2></div>
 <div class="copy">
 <p class="big">A five-dot Human Evidence score does not mean “better peptide.” It means the compound has a deeper human evidence base for at least one defined use.</p>
 <div class="claims">
@@ -231,7 +695,7 @@ h1{font:700 clamp(62px,9vw,122px)/.84 var(--serif);letter-spacing:-.065em;margin
 </div></div></section>
 
 <section class="section"><div class="wrap section-grid">
-<div><div class="num">03 / EDITOR'S READ</div><h2>What stands out right now.</h2></div>
+<div><div class="num">04 / EDITOR'S READ</div><h2>What stands out right now.</h2></div>
 <div class="copy">
 <div class="signal-grid">
 <div class="panel"><div class="eyebrow">Biggest Gap</div><h3>BPC-157</h3><p>Recovery culture has built a remarkably confident story around a compound with only tiny, uncontrolled human datasets.</p><p><a href="/bpc-157.html"><strong>Read BPC-157 →</strong></a></p></div>
@@ -241,7 +705,7 @@ h1{font:700 clamp(62px,9vw,122px)/.84 var(--serif);letter-spacing:-.065em;margin
 </div></div></div></section>
 
 <section class="section"><div class="wrap section-grid">
-<div><div class="num">04 / START WITH THE OUTCOME</div><h2>The compound isn't the question. The outcome is.</h2></div>
+<div><div class="num">05 / START WITH THE OUTCOME</div><h2>The compound isn't the question. The outcome is.</h2></div>
 <div class="copy"><p class="big">The Peptide Index is one way into the science. Outcome Hubs reverse the lens: begin with recovery, metabolic health, cognition, gut health or longevity, then ask which interventions actually have evidence.</p>
 <p><a href="/#/goals"><strong>Explore Outcome Hubs →</strong></a></p>
 </div></div></section>
@@ -269,6 +733,28 @@ document.querySelectorAll('.filter').forEach(function(btn){
   });
  });
 });
+</script>
+
+<script>
+(function(){
+ var input=document.getElementById('librarySearch');
+ if(!input)return;
+ var rows=[].slice.call(document.querySelectorAll('.library-row'));
+ var count=document.getElementById('libraryVisible');
+ var empty=document.getElementById('libraryEmpty');
+ function apply(){
+   var q=input.value.trim().toLowerCase();
+   var visible=0;
+   rows.forEach(function(row){
+     var show=!q || row.dataset.search.indexOf(q)>-1;
+     row.classList.toggle('hidden',!show);
+     if(show)visible++;
+   });
+   count.textContent=visible;
+   empty.hidden=visible!==0;
+ }
+ input.addEventListener('input',apply);
+})();
 </script>
 </body>
 </html>
