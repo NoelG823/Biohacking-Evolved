@@ -187,14 +187,32 @@ h1{font:700 clamp(62px,9vw,122px)/.84 var(--serif);letter-spacing:-.065em;margin
   .library-cat,.library-status{min-height:auto}
 }
 
-.explore-search{margin:28px 0 34px;padding:24px 26px 22px;border:1px solid var(--ink);background:rgba(255,253,248,.58)}.explore-search .eyebrow{color:var(--ink);margin-bottom:5px}.explore-search-copy{font-family:var(--serif);font-size:20px;line-height:1.35;margin:0 0 16px}.explore-search-row{display:flex;align-items:center;border:1px solid #8f8a80;background:var(--white);min-height:56px}.explore-search-icon{font-size:19px;padding-left:17px;opacity:.72}.explore-search input{flex:1;border:0!important;background:transparent!important;padding:16px 13px!important;font-size:15px!important;outline:none}.explore-search .outcome-link{white-space:nowrap;border-left:1px solid var(--line);padding:18px 17px;font-size:10px;letter-spacing:.11em;text-transform:uppercase;text-decoration:none;font-weight:700}.explore-search-note{margin:11px 0 0;color:var(--muted);font-size:12px}.plain-english{grid-column:1/-1;margin-top:8px;font-family:var(--serif);font-size:15px;line-height:1.45;color:#4f4d47}.plain-english b{font-family:var(--sans);font-size:9px;letter-spacing:.11em;text-transform:uppercase;margin-right:7px;color:var(--muted)}@media(max-width:700px){.explore-search{padding:20px 18px}.explore-search-row{display:block}.explore-search-icon{display:none}.explore-search input{width:100%}.explore-search .outcome-link{display:block;border-left:0;border-top:1px solid var(--line);padding:13px}}</style>
+
+/* Blend treatment */
+.blends-section{padding:64px 0 54px;background:#eee8dc;border-top:1px solid rgba(31,31,29,.12);border-bottom:1px solid rgba(31,31,29,.12)}
+.blends-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:28px}
+.blends-head h2{margin:8px 0 0;font-size:clamp(38px,5vw,64px);line-height:.96}
+.blends-head p{margin:0;max-width:580px;color:#5d5a54;line-height:1.65}
+.blends-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.blend-card{position:relative;background:#f8f4eb;border:1px solid rgba(31,31,29,.18);padding:26px;min-height:300px}
+.blend-card.hidden{display:none}.blend-label{font-size:9px;letter-spacing:.14em;text-transform:uppercase;opacity:.55;margin-bottom:18px}
+.blend-card h3{font-family:Georgia,serif;font-size:38px;line-height:1;margin:0 0 8px}
+.blend-formula{font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:20px}
+.blend-card .blend-deck{font-family:Georgia,serif;font-size:19px;line-height:1.35;margin:0 0 24px;max-width:580px}
+.blend-metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;border-top:1px solid rgba(31,31,29,.12);padding-top:16px}
+.blend-metrics span{display:block;font-size:8px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-bottom:5px}.blend-metrics b{font-size:11px}
+.blend-open{display:inline-block;margin-top:22px;font-size:9px;letter-spacing:.1em;text-transform:uppercase}.blend-card>a.cover{position:absolute;inset:0}
+.blend-note{margin-top:18px;font-size:11px;line-height:1.55;color:#66635d;max-width:900px}
+@media(max-width:760px){.blends-head,.blends-grid{grid-template-columns:1fr}.blends-section{padding:46px 0}.blend-card{min-height:auto}}
+
+</style>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"The Peptide Index","url":"https://biohackingevolved.com/peptides.html","description":"A living evidence map of peptides discussed in biohacking, comparing human evidence, community signal, evidence gaps, outcomes and regulatory status.","isPartOf":{"@type":"WebSite","name":"BIOHACKING. EVOLVED.","url":"https://biohackingevolved.com/"}}</script>
 </head>
 <body>
 <header class="top"><div class="wrap nav">
 <a class="brand" href="/">BIOHACKING. EVOLVED.</a>
-<a class="active" href="/peptides.html">Peptides</a><a href="/#/goals">Goals</a><a href="/science.html">The Science</a><a href="/#/compare">Compare</a><a href="/#/pulse">Community Pulse</a><a href="/#/updates/all">What Changed?</a>
+<a class="active" href="/peptides.html">Peptides</a><a href="/#/goals">Goals</a><a href="/science.html">The Science</a><a href="/#/compare">Compare</a><a href="/community-pulse.html">Community Pulse</a><a href="/#/updates/all">What Changed?</a>
 </div></header>
 
 <main>
@@ -318,20 +336,40 @@ h1{font:700 clamp(62px,9vw,122px)/.84 var(--serif);letter-spacing:-.065em;margin
 </div></section>
 
 
+
+<section class="blends-section"><div class="wrap">
+<div class="blends-head"><div><div class="num">02 / BLENDS</div><h2>When compounds become combinations.</h2></div>
+<p>Blends get their own evidence treatment. We separate what is known about each component from what has actually been demonstrated about the finished combination.</p></div>
+<div class="blends-grid" id="blendGrid">
+<article class="blend-card" data-search="wolverine blend bpc-157 tb-500 recovery repair injury inflammation combination community signal">
+<div class="blend-label">Blend · Recovery</div><h3>Wolverine</h3><div class="blend-formula">BPC-157 + TB-500</div>
+<p class="blend-deck">Two of the community’s most popular recovery peptides. One combination whose reputation has developed much faster than its direct evidence.</p>
+<div class="blend-metrics"><div><span>Combination Evidence</span><b>●○○○○</b></div><div><span>The Gap</span><b>VERY WIDE</b></div></div>
+<div class="blend-open">View Blend Evidence Profile →</div><a class="cover" href="/wolverine-blend.html" aria-label="Open Wolverine blend evidence profile"></a></article>
+<article class="blend-card" data-search="glow blend ghk-cu bpc-157 tb-500 skin collagen tissue remodeling recovery aesthetics combination community signal">
+<div class="blend-label">Blend · Recovery + Tissue Remodeling</div><h3>GLOW</h3><div class="blend-formula">GHK-Cu + BPC-157 + TB-500</div>
+<p class="blend-deck">Recovery meets tissue remodeling and skin biology. Three compelling component stories—without direct evidence that the blend itself delivers the combined promise.</p>
+<div class="blend-metrics"><div><span>Combination Evidence</span><b>●○○○○</b></div><div><span>The Gap</span><b>VERY WIDE</b></div></div>
+<div class="blend-open">View Blend Evidence Profile →</div><a class="cover" href="/glow-blend.html" aria-label="Open GLOW blend evidence profile"></a></article>
+</div><p class="blend-note"><strong>Blend rule:</strong> evidence for individual ingredients does not automatically become evidence for the combination. Blend profiles track component evidence, combination evidence and Community Signal separately.</p>
+</div></section>
+
 <section class="section full-library-section"><div class="wrap">
-<div class="num">02 / FULL PEPTIDE INDEX</div>
+<div class="num">03 / FULL PEPTIDE INDEX</div>
 <div class="index-head">
   <h2>Explore the broader library.</h2>
-  <p><strong>51 peptides tracked.</strong> The seven flagship profiles above are our deepest evidence reviews. The additional 44 entries remain available while we progressively upgrade them into full Evidence Profiles.</p>
+  <p><strong>51 peptides + NAD+ + 2 community blends tracked.</strong> The seven flagship profiles above are our deepest evidence reviews. We also include select adjacent biohacking compounds when they are important to how people actually research the space. NAD+ is labeled separately because it is not a peptide.</p>
 </div>
 <div class="library-tools">
-  <div class="explore-search"><div class="eyebrow">EXPLORE THE INDEX</div><p class="explore-search-copy">Peptides, compounds, evidence and outcomes.</p><div class="explore-search-row"><span class="explore-search-icon">⌕</span><input id="librarySearch" class="library-search" type="search" placeholder="Search BPC-157, NAD+, recovery, longevity…" autocomplete="off"><a class="outcome-link" href="/#/goals">Explore by Outcome →</a></div><p class="explore-search-note">Start with a compound—or start with what you want to understand.</p></div>
-  <div class="library-count"><span id="libraryVisible">44</span> additional Index entries</div>
+  <div style="grid-column:1/-1;font-size:12px;line-height:1.5;color:#66635d;margin-bottom:2px">The Peptide Index also surfaces a small number of important adjacent compounds. These are clearly labeled when they are not peptides.</div>
+  <label class="library-search-label" for="librarySearch">Search the Index</label>
+  <input id="librarySearch" class="library-search" type="search" placeholder="Search peptide, compound, outcome or status…" autocomplete="off">
+  <div class="library-count"><span id="libraryVisible">45</span> additional Index entries</div>
 </div>
 <div class="library-head" aria-hidden="true">
   <span>Peptide</span><span>Primary areas</span><span>Human evidence</span><span>Status</span><span></span>
 </div>
-<div class="library-subhead">44 additional Index entries</div><div class="library-list" id="libraryList">
+<div class="library-subhead">45 additional Index entries</div><div class="library-list" id="libraryList">
 <article class="library-row" data-search="abaloparatide bone health · regenerative medicine fda-approved peptide drug" data-human="5">
   <a href="/#/peptide/abaloparatide" class="library-main">
     <div class="library-name">Abaloparatide</div>
@@ -382,18 +420,18 @@ h1{font:700 clamp(62px,9vw,122px)/.84 var(--serif);letter-spacing:-.065em;margin
   </a>
 </article>
 
-<article class="library-row" data-search="cibinetide (ara-290) neuropathic pain · inflammation · tissue protection investigational" data-human="3">
-  <a href="/#/peptide/ara-290" class="library-main">
+<article class="library-row" data-search="cibinetide (ara-290) neuropathic pain · inflammation · tissue protection investigational" data-human="4">
+  <a href="/cibinetide-ara-290.html" class="library-main">
     <div class="library-name">Cibinetide (ARA-290)</div>
     <div class="library-cat">Neuropathic Pain · Inflammation · Tissue Protection</div>
-    <div class="library-human"><span>Human Evidence</span><b>●●●○○</b></div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●●○</b></div>
     <div class="library-status">Investigational</div>
     <div class="library-open">View Index Entry →</div>
   </a>
 </article>
 
 <article class="library-row" data-search="cjc-1295 growth hormone axis · recovery · body composition investigational" data-human="2">
-  <a href="/#/peptide/cjc-1295" class="library-main">
+  <a href="/cjc-1295.html" class="library-main">
     <div class="library-name">CJC-1295</div>
     <div class="library-cat">Growth Hormone Axis · Recovery · Body Composition</div>
     <div class="library-human"><span>Human Evidence</span><b>●●○○○</b></div>
@@ -433,7 +471,7 @@ h1{font:700 clamp(62px,9vw,122px)/.84 var(--serif);letter-spacing:-.065em;margin
 </article>
 
 <article class="library-row" data-search="epitalon longevity · sleep · aging biology investigational" data-human="1">
-  <a href="/#/peptide/epitalon" class="library-main">
+  <a href="/epitalon.html" class="library-main">
     <div class="library-name">Epitalon</div>
     <div class="library-cat">Longevity · Sleep · Aging Biology</div>
     <div class="library-human"><span>Human Evidence</span><b>●○○○○</b></div>
@@ -459,7 +497,7 @@ h1{font:700 clamp(62px,9vw,122px)/.84 var(--serif);letter-spacing:-.065em;margin
     <div class="library-human"><span>Human Evidence</span><b>●●○○○</b></div>
     <div class="library-status">Route-dependent / investigational</div>
     <div class="library-open">View Index Entry →</div>
-  <div class="plain-english"><b>In Plain English</b>GHK-Cu supports collagen and tissue-remodeling biology, making it especially interesting for skin, hair and repair.</div></a>
+  </a>
 </article>
 
 <article class="library-row" data-search="ghrp-2 growth hormone axis · appetite · recovery investigational / non-u.s. use" data-human="2">
@@ -523,7 +561,7 @@ h1{font:700 clamp(62px,9vw,122px)/.84 var(--serif);letter-spacing:-.065em;margin
 </article>
 
 <article class="library-row" data-search="ipamorelin growth hormone axis · recovery · sleep investigational / compounded use" data-human="2">
-  <a href="/#/peptide/ipamorelin" class="library-main">
+  <a href="/ipamorelin.html" class="library-main">
     <div class="library-name">Ipamorelin</div>
     <div class="library-cat">Growth Hormone Axis · Recovery · Sleep</div>
     <div class="library-human"><span>Human Evidence</span><b>●●○○○</b></div>
@@ -602,6 +640,17 @@ h1{font:700 clamp(62px,9vw,122px)/.84 var(--serif);letter-spacing:-.065em;margin
   </a>
 </article>
 
+
+<article class="library-row" data-search="nad+ nad nad plus cellular energy · longevity · metabolic health · mitochondrial biology non-peptide · nad biology" data-human="3">
+  <a href="/nad-plus.html" class="library-main">
+    <div class="library-name">NAD+ <span style="font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.58;margin-left:7px">Non-peptide</span></div>
+    <div class="library-cat">Cellular Energy · Longevity · Metabolic Health</div>
+    <div class="library-human"><span>Human Evidence</span><b>●●●○○</b></div>
+    <div class="library-status">NAD biology · route-dependent evidence</div>
+    <div class="library-open">View Evidence Profile →</div>
+  </a>
+</article>
+
 <article class="library-row" data-search="octreotide endocrinology · gi hormones · somatostatin fda-approved peptide drug" data-human="5">
   <a href="/#/peptide/octreotide" class="library-main">
     <div class="library-name">Octreotide</div>
@@ -669,7 +718,7 @@ h1{font:700 clamp(62px,9vw,122px)/.84 var(--serif);letter-spacing:-.065em;margin
     <div class="library-human"><span>Human Evidence</span><b>●●○○○</b></div>
     <div class="library-status">Investigational in U.S.</div>
     <div class="library-open">View Index Entry →</div>
-  <div class="plain-english"><b>In Plain English</b>Selank has a human anxiety-research signal and is increasingly discussed for calm focus and cognitive support.</div></a>
+  </a>
 </article>
 
 <article class="library-row" data-search="semaglutide metabolic health · weight management fda-approved drugs exist" data-human="5">
@@ -683,7 +732,7 @@ h1{font:700 clamp(62px,9vw,122px)/.84 var(--serif);letter-spacing:-.065em;margin
 </article>
 
 <article class="library-row" data-search="sermorelin growth hormone axis · recovery · body composition prescription peptide / historical fda product" data-human="3">
-  <a href="/#/peptide/sermorelin" class="library-main">
+  <a href="/sermorelin.html" class="library-main">
     <div class="library-name">Sermorelin</div>
     <div class="library-cat">Growth Hormone Axis · Recovery · Body Composition</div>
     <div class="library-human"><span>Human Evidence</span><b>●●●○○</b></div>
@@ -834,18 +883,24 @@ document.querySelectorAll('.filter').forEach(function(btn){
  var input=document.getElementById('librarySearch');
  if(!input)return;
  var rows=[].slice.call(document.querySelectorAll('.library-row'));
+ var blends=[].slice.call(document.querySelectorAll('.blend-card'));
  var count=document.getElementById('libraryVisible');
  var empty=document.getElementById('libraryEmpty');
  function apply(){
    var q=input.value.trim().toLowerCase();
-   var visible=0;
+   var visible=0, blendVisible=0;
    rows.forEach(function(row){
      var show=!q || row.dataset.search.indexOf(q)>-1;
      row.classList.toggle('hidden',!show);
      if(show)visible++;
    });
+   blends.forEach(function(card){
+     var show=!q || card.dataset.search.indexOf(q)>-1;
+     card.classList.toggle('hidden',!show);
+     if(show)blendVisible++;
+   });
    count.textContent=visible;
-   empty.hidden=visible!==0;
+   empty.hidden=(visible+blendVisible)!==0;
  }
  input.addEventListener('input',apply);
 })();
