@@ -205,7 +205,7 @@ h1{font:700 clamp(62px,9vw,122px)/.84 var(--serif);letter-spacing:-.065em;margin
 .blend-note{margin-top:18px;font-size:11px;line-height:1.55;color:#66635d;max-width:900px}
 @media(max-width:760px){.blends-head,.blends-grid{grid-template-columns:1fr}.blends-section{padding:46px 0}.blend-card{min-height:auto}}
 
-</style>
+ .plain-label{display:block;font-size:9px;letter-spacing:.12em;margin-bottom:7px}.adjacent-core{margin-top:24px;padding:26px;border:1px solid var(--line);background:var(--white)}.adjacent-core h3{font:700 34px/1 var(--serif);margin:8px 0 12px}.adjacent-core p{max-width:780px} </style>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"The Peptide Index","url":"https://biohackingevolved.com/peptides.html","description":"A living evidence map of peptides discussed in biohacking, comparing human evidence, community signal, evidence gaps, outcomes and regulatory status.","isPartOf":{"@type":"WebSite","name":"BIOHACKING. EVOLVED.","url":"https://biohackingevolved.com/"}}</script>
 </head>
@@ -229,113 +229,16 @@ h1{font:700 clamp(62px,9vw,122px)/.84 var(--serif);letter-spacing:-.065em;margin
 
 <section class="snapshot"><div class="wrap">
 <div class="scoregrid">
-<div class="score"><div class="k">Flagship profiles</div><div class="v">7</div><div class="note">Source-backed deep dives live now</div></div>
+<div class="score"><div class="k">Flagship profiles</div><div class="v">14</div><div class="note">Full evidence profiles live now</div></div>
 <div class="score"><div class="k">Strongest human evidence</div><div class="v">TESAMORELIN</div><div class="note">Established efficacy in a specific approved indication</div></div>
 <div class="score"><div class="k">Biggest evidence gaps</div><div class="v">BPC · KPV · TB-500</div><div class="note">Community confidence far exceeds human evidence</div></div>
 <div class="score"><div class="k">Fastest-moving story</div><div class="v">RETATRUTIDE</div><div class="note">Late-stage clinical development + intense public attention</div></div>
 <div class="score"><div class="k">Evidence rule</div><div class="v">CONTEXT MATTERS</div><div class="note">Approval and evidence belong to the molecule, population and outcome studied</div></div>
 </div></div></section>
 
-<section class="section"><div class="wrap">
-<div class="num">01 / DEEP-DIVE EVIDENCE PROFILES</div>
-<div class="index-head"><h2>Seven flagship profiles.</h2><p>Our fully researched, source-backed deep dives. Compare Human Evidence, Community Signal, The Gap, outcome and regulatory status using one consistent editorial framework.</p></div>
-<div class="filters" role="group" aria-label="Filter peptide profiles">
-<button class="filter active" data-filter="all">All 7</button>
-<button class="filter" data-filter="human">Strong Human Evidence</button>
-<button class="filter" data-filter="wide">Wide Evidence Gap</button>
-<button class="filter" data-filter="recovery">Recovery</button>
-<button class="filter" data-filter="metabolic">Metabolic</button>
-<button class="filter" data-filter="mitochondrial">Cellular Energy</button>
-<button class="filter" data-filter="approved">FDA Approved</button>
-</div>
-<div class="index-grid" id="indexGrid">
-    <article class="idx-card" data-human="1" data-gap="VERY WIDE" data-status="not fda approved" data-outcome="recovery · gut health">
-      <div class="idx-top"><span class="idx-name">BPC-157</span><span class="idx-arrow">↗</span></div>
-      <p class="idx-deck">Recovery's most talked-about peptide—and one of its biggest evidence gaps.</p>
-      <div class="idx-verdict">Promising biology. Unproven therapy.</div>
-      <div class="idx-metrics">
-        <div><span>Human Evidence</span><b>●○○○○</b></div>
-        <div><span>Community Signal</span><b>●●●●●</b></div>
-        <div><span>The Gap</span><b class="gaptext">VERY WIDE</b></div>
-      </div>
-      <div class="idx-foot"><span>Recovery · Gut Health</span><span>Not FDA approved</span></div>
-      <a class="idx-link" href="/bpc-157.html" aria-label="Open BPC-157 evidence profile"></a>
-    </article>
-    <article class="idx-card" data-human="4" data-gap="CONTEXT-DEPENDENT" data-status="investigational" data-outcome="metabolic health">
-      <div class="idx-top"><span class="idx-name">Retatrutide</span><span class="idx-arrow">↗</span></div>
-      <p class="idx-deck">A triple-agonist obesity medicine with unusually strong clinical weight-loss data.</p>
-      <div class="idx-verdict">Strong clinical signal. Still investigational.</div>
-      <div class="idx-metrics">
-        <div><span>Human Evidence</span><b>●●●●○</b></div>
-        <div><span>Community Signal</span><b>●●●●●</b></div>
-        <div><span>The Gap</span><b class="gaptext">CONTEXT-DEPENDENT</b></div>
-      </div>
-      <div class="idx-foot"><span>Metabolic Health</span><span>Investigational</span></div>
-      <a class="idx-link" href="/retatrutide.html" aria-label="Open Retatrutide evidence profile"></a>
-    </article>
-    <article class="idx-card" data-human="5" data-gap="CONTEXT-DEPENDENT" data-status="fda approved · specific indication" data-outcome="metabolic health">
-      <div class="idx-top"><span class="idx-name">Tesamorelin</span><span class="idx-arrow">↗</span></div>
-      <p class="idx-deck">Real approval and strong human evidence—with an indication narrower than its biohacking reputation.</p>
-      <div class="idx-verdict">Established efficacy. Specific indication.</div>
-      <div class="idx-metrics">
-        <div><span>Human Evidence</span><b>●●●●●</b></div>
-        <div><span>Community Signal</span><b>●●●●○</b></div>
-        <div><span>The Gap</span><b class="gaptext">CONTEXT-DEPENDENT</b></div>
-      </div>
-      <div class="idx-foot"><span>Metabolic Health</span><span>FDA approved · specific indication</span></div>
-      <a class="idx-link" href="/tesamorelin.html" aria-label="Open Tesamorelin evidence profile"></a>
-    </article>
-    <article class="idx-card" data-human="2" data-gap="WIDE" data-status="not fda approved" data-outcome="cellular energy · metabolic health">
-      <div class="idx-top"><span class="idx-name">MOTS-c</span><span class="idx-arrow">↗</span></div>
-      <p class="idx-deck">An endogenous mitochondrial signal whose biology is more established than its therapeutic use.</p>
-      <div class="idx-verdict">Compelling biology. Human therapy unproven.</div>
-      <div class="idx-metrics">
-        <div><span>Human Evidence</span><b>●●○○○</b></div>
-        <div><span>Community Signal</span><b>●●●●○</b></div>
-        <div><span>The Gap</span><b class="gaptext">WIDE</b></div>
-      </div>
-      <div class="idx-foot"><span>Cellular Energy · Metabolic Health</span><span>Not FDA approved</span></div>
-      <a class="idx-link" href="/mots-c.html" aria-label="Open MOTS-c evidence profile"></a>
-    </article>
-    <article class="idx-card" data-human="1" data-gap="VERY WIDE" data-status="not fda approved" data-outcome="gut health · recovery">
-      <div class="idx-top"><span class="idx-name">KPV</span><span class="idx-arrow">↗</span></div>
-      <p class="idx-deck">A tiny anti-inflammatory peptide with a broad preclinical story and almost no human therapeutic evidence.</p>
-      <div class="idx-verdict">Interesting anti-inflammatory signal. Human efficacy unproven.</div>
-      <div class="idx-metrics">
-        <div><span>Human Evidence</span><b>●○○○○</b></div>
-        <div><span>Community Signal</span><b>●●●●○</b></div>
-        <div><span>The Gap</span><b class="gaptext">VERY WIDE</b></div>
-      </div>
-      <div class="idx-foot"><span>Gut Health · Recovery</span><span>Not FDA approved</span></div>
-      <a class="idx-link" href="/kpv.html" aria-label="Open KPV evidence profile"></a>
-    </article>
-    <article class="idx-card" data-human="4" data-gap="CONTEXT-DEPENDENT" data-status="fda approved · specific indication" data-outcome="cellular energy · performance">
-      <div class="idx-top"><span class="idx-name">SS-31 / Elamipretide</span><span class="idx-arrow">↗</span></div>
-      <p class="idx-deck">A mitochondria-targeting peptide that became an FDA-approved medicine for Barth syndrome.</p>
-      <div class="idx-verdict">Real human evidence. Real approval. Narrow indication.</div>
-      <div class="idx-metrics">
-        <div><span>Human Evidence</span><b>●●●●○</b></div>
-        <div><span>Community Signal</span><b>●●●●○</b></div>
-        <div><span>The Gap</span><b class="gaptext">CONTEXT-DEPENDENT</b></div>
-      </div>
-      <div class="idx-foot"><span>Cellular Energy · Performance</span><span>FDA approved · specific indication</span></div>
-      <a class="idx-link" href="/ss-31-elamipretide.html" aria-label="Open SS-31 / Elamipretide evidence profile"></a>
-    </article>
-    <article class="idx-card" data-human="1" data-gap="VERY WIDE" data-status="not fda approved" data-outcome="recovery">
-      <div class="idx-top"><span class="idx-name">TB-500</span><span class="idx-arrow">↗</span></div>
-      <p class="idx-deck">A recovery-culture staple whose reputation frequently borrows evidence from full-length thymosin beta-4.</p>
-      <div class="idx-verdict">Biologically related. Clinically not equivalent.</div>
-      <div class="idx-metrics">
-        <div><span>Human Evidence</span><b>●○○○○</b></div>
-        <div><span>Community Signal</span><b>●●●●●</b></div>
-        <div><span>The Gap</span><b class="gaptext">VERY WIDE</b></div>
-      </div>
-      <div class="idx-foot"><span>Recovery</span><span>Not FDA approved</span></div>
-      <a class="idx-link" href="/tb-500.html" aria-label="Open TB-500 evidence profile"></a>
-    </article></div>
-</div></section>
-
-
+<section class="section"><div class="wrap"><div class="num">01 / FLAGSHIP EVIDENCE PROFILES</div>
+<div class="index-head"><h2>Fourteen flagship profiles.</h2><p>Flagship now has a specific meaning: a full evidence profile with Human Evidence, Community Signal, The Gap, regulatory context and an In Plain English translation.</p></div>
+<div class="filters" role="group" aria-label="Filter flagship profiles"><button class="filter active" data-filter="all">All 14</button><button class="filter" data-filter="human">Strong Human Evidence</button><button class="filter" data-filter="wide">Wide Evidence Gap</button><button class="filter" data-filter="recovery">Recovery</button><button class="filter" data-filter="metabolic">Metabolic</button><button class="filter" data-filter="mitochondrial">Cellular Energy</button><button class="filter" data-filter="approved">FDA Approved</button></div><div class="index-grid" id="indexGrid"><article class="idx-card" data-search="bpc-157 recovery · gut health bpc-157 may support the body’s natural repair processes, which helps explain why the community is so interested in it for injuries, inflammation and recovery." data-human="1" data-gap="VERY WIDE" data-status="not fda approved" data-outcome="recovery · gut health"><div class="idx-top"><span class="idx-name">BPC-157</span><span class="idx-arrow">↗</span></div><p class="idx-deck"><b class="plain-label">IN PLAIN ENGLISH</b>BPC-157 may support the body’s natural repair processes, which helps explain why the community is so interested in it for injuries, inflammation and recovery.</p><div class="idx-metrics"><div><span>Human Evidence</span><b>●○○○○</b></div><div><span>The Gap</span><b class="gaptext">VERY WIDE</b></div></div><div class="idx-foot"><span>Recovery · Gut Health</span><span>Not FDA approved</span></div><a class="idx-link" href="/bpc-157.html" aria-label="Open BPC-157 evidence profile"></a></article><article class="idx-card" data-search="retatrutide metabolic health retatrutide targets three metabolic hormone pathways and has produced substantial weight loss in human clinical trials." data-human="4" data-gap="CONTEXT-DEPENDENT" data-status="investigational" data-outcome="metabolic health"><div class="idx-top"><span class="idx-name">Retatrutide</span><span class="idx-arrow">↗</span></div><p class="idx-deck"><b class="plain-label">IN PLAIN ENGLISH</b>Retatrutide targets three metabolic hormone pathways and has produced substantial weight loss in human clinical trials.</p><div class="idx-metrics"><div><span>Human Evidence</span><b>●●●●○</b></div><div><span>The Gap</span><b class="gaptext">CONTEXT-DEPENDENT</b></div></div><div class="idx-foot"><span>Metabolic Health</span><span>Investigational</span></div><a class="idx-link" href="/retatrutide.html" aria-label="Open Retatrutide evidence profile"></a></article><article class="idx-card" data-search="tesamorelin metabolic health · gh axis tesamorelin stimulates your body’s own growth-hormone pathway and has been shown in humans to reduce visceral abdominal fat in a specific clinical population." data-human="5" data-gap="CONTEXT-DEPENDENT" data-status="fda approved · specific indication" data-outcome="metabolic health · gh axis"><div class="idx-top"><span class="idx-name">Tesamorelin</span><span class="idx-arrow">↗</span></div><p class="idx-deck"><b class="plain-label">IN PLAIN ENGLISH</b>Tesamorelin stimulates your body’s own growth-hormone pathway and has been shown in humans to reduce visceral abdominal fat in a specific clinical population.</p><div class="idx-metrics"><div><span>Human Evidence</span><b>●●●●●</b></div><div><span>The Gap</span><b class="gaptext">CONTEXT-DEPENDENT</b></div></div><div class="idx-foot"><span>Metabolic Health · GH Axis</span><span>FDA approved · specific indication</span></div><a class="idx-link" href="/tesamorelin.html" aria-label="Open Tesamorelin evidence profile"></a></article><article class="idx-card" data-search="mots-c cellular energy · metabolic health mots-c may help your body manage and use energy more efficiently, especially during metabolic stress such as exercise." data-human="2" data-gap="WIDE" data-status="not fda approved" data-outcome="cellular energy · metabolic health"><div class="idx-top"><span class="idx-name">MOTS-c</span><span class="idx-arrow">↗</span></div><p class="idx-deck"><b class="plain-label">IN PLAIN ENGLISH</b>MOTS-c may help your body manage and use energy more efficiently, especially during metabolic stress such as exercise.</p><div class="idx-metrics"><div><span>Human Evidence</span><b>●●○○○</b></div><div><span>The Gap</span><b class="gaptext">WIDE</b></div></div><div class="idx-foot"><span>Cellular Energy · Metabolic Health</span><span>Not FDA approved</span></div><a class="idx-link" href="/mots-c.html" aria-label="Open MOTS-c evidence profile"></a></article><article class="idx-card" data-search="kpv gut health · recovery kpv appears to calm inflammatory signaling, which is why it’s gaining attention for gut health and broader inflammation." data-human="1" data-gap="VERY WIDE" data-status="not fda approved" data-outcome="gut health · recovery"><div class="idx-top"><span class="idx-name">KPV</span><span class="idx-arrow">↗</span></div><p class="idx-deck"><b class="plain-label">IN PLAIN ENGLISH</b>KPV appears to calm inflammatory signaling, which is why it’s gaining attention for gut health and broader inflammation.</p><div class="idx-metrics"><div><span>Human Evidence</span><b>●○○○○</b></div><div><span>The Gap</span><b class="gaptext">VERY WIDE</b></div></div><div class="idx-foot"><span>Gut Health · Recovery</span><span>Not FDA approved</span></div><a class="idx-link" href="/kpv.html" aria-label="Open KPV evidence profile"></a></article><article class="idx-card" data-search="ss-31 / elamipretide cellular energy · performance ss-31 targets mitochondria to help them produce energy more efficiently, an approach now validated for one rare mitochondrial disease." data-human="4" data-gap="CONTEXT-DEPENDENT" data-status="fda approved · specific indication" data-outcome="cellular energy · performance"><div class="idx-top"><span class="idx-name">SS-31 / Elamipretide</span><span class="idx-arrow">↗</span></div><p class="idx-deck"><b class="plain-label">IN PLAIN ENGLISH</b>SS-31 targets mitochondria to help them produce energy more efficiently, an approach now validated for one rare mitochondrial disease.</p><div class="idx-metrics"><div><span>Human Evidence</span><b>●●●●○</b></div><div><span>The Gap</span><b class="gaptext">CONTEXT-DEPENDENT</b></div></div><div class="idx-foot"><span>Cellular Energy · Performance</span><span>FDA approved · specific indication</span></div><a class="idx-link" href="/ss-31-elamipretide.html" aria-label="Open SS-31 / Elamipretide evidence profile"></a></article><article class="idx-card" data-search="tb-500 recovery tb-500 is used in the community to support healing, mobility and recovery, based largely on promising repair biology related to thymosin beta-4." data-human="1" data-gap="VERY WIDE" data-status="not fda approved" data-outcome="recovery"><div class="idx-top"><span class="idx-name">TB-500</span><span class="idx-arrow">↗</span></div><p class="idx-deck"><b class="plain-label">IN PLAIN ENGLISH</b>TB-500 is used in the community to support healing, mobility and recovery, based largely on promising repair biology related to thymosin beta-4.</p><div class="idx-metrics"><div><span>Human Evidence</span><b>●○○○○</b></div><div><span>The Gap</span><b class="gaptext">VERY WIDE</b></div></div><div class="idx-foot"><span>Recovery</span><span>Not FDA approved</span></div><a class="idx-link" href="/tb-500.html" aria-label="Open TB-500 evidence profile"></a></article><article class="idx-card" data-search="ghk-cu skin · repair · longevity ghk-cu supports collagen and tissue-remodeling biology, making it especially interesting for skin, hair, wound healing and recovery." data-human="2" data-gap="WIDE" data-status="route-dependent" data-outcome="skin · repair · longevity"><div class="idx-top"><span class="idx-name">GHK-Cu</span><span class="idx-arrow">↗</span></div><p class="idx-deck"><b class="plain-label">IN PLAIN ENGLISH</b>GHK-Cu supports collagen and tissue-remodeling biology, making it especially interesting for skin, hair, wound healing and recovery.</p><div class="idx-metrics"><div><span>Human Evidence</span><b>●●○○○</b></div><div><span>The Gap</span><b class="gaptext">WIDE</b></div></div><div class="idx-foot"><span>Skin · Repair · Longevity</span><span>Route-dependent</span></div><a class="idx-link" href="/ghk-cu.html" aria-label="Open GHK-Cu evidence profile"></a></article><article class="idx-card" data-search="selank cognition · anxiety selank has shown a human signal for reducing anxiety and is increasingly used by the community to support a calmer, more focused mental state." data-human="3" data-gap="MEANINGFUL" data-status="investigational" data-outcome="cognition · anxiety"><div class="idx-top"><span class="idx-name">Selank</span><span class="idx-arrow">↗</span></div><p class="idx-deck"><b class="plain-label">IN PLAIN ENGLISH</b>Selank has shown a human signal for reducing anxiety and is increasingly used by the community to support a calmer, more focused mental state.</p><div class="idx-metrics"><div><span>Human Evidence</span><b>●●●○○</b></div><div><span>The Gap</span><b class="gaptext">MEANINGFUL</b></div></div><div class="idx-foot"><span>Cognition · Anxiety</span><span>Investigational</span></div><a class="idx-link" href="/selank.html" aria-label="Open Selank evidence profile"></a></article><article class="idx-card" data-search="cjc-1295 gh axis · recovery cjc-1295 stimulates your body to release more of its own growth hormone and igf-1, which is why it has become popular for recovery, body composition and performance." data-human="3" data-gap="MEANINGFUL" data-status="investigational" data-outcome="gh axis · recovery"><div class="idx-top"><span class="idx-name">CJC-1295</span><span class="idx-arrow">↗</span></div><p class="idx-deck"><b class="plain-label">IN PLAIN ENGLISH</b>CJC-1295 stimulates your body to release more of its own growth hormone and IGF-1, which is why it has become popular for recovery, body composition and performance.</p><div class="idx-metrics"><div><span>Human Evidence</span><b>●●●○○</b></div><div><span>The Gap</span><b class="gaptext">MEANINGFUL</b></div></div><div class="idx-foot"><span>GH Axis · Recovery</span><span>Investigational</span></div><a class="idx-link" href="/cjc-1295.html" aria-label="Open CJC-1295 evidence profile"></a></article><article class="idx-card" data-search="ipamorelin gh axis · recovery · sleep ipamorelin signals your body to release more of its own growth hormone, which is why it has become popular for recovery, body composition, sleep and performance." data-human="3" data-gap="MEANINGFUL" data-status="investigational" data-outcome="gh axis · recovery · sleep"><div class="idx-top"><span class="idx-name">Ipamorelin</span><span class="idx-arrow">↗</span></div><p class="idx-deck"><b class="plain-label">IN PLAIN ENGLISH</b>Ipamorelin signals your body to release more of its own growth hormone, which is why it has become popular for recovery, body composition, sleep and performance.</p><div class="idx-metrics"><div><span>Human Evidence</span><b>●●●○○</b></div><div><span>The Gap</span><b class="gaptext">MEANINGFUL</b></div></div><div class="idx-foot"><span>GH Axis · Recovery · Sleep</span><span>Investigational</span></div><a class="idx-link" href="/ipamorelin.html" aria-label="Open Ipamorelin evidence profile"></a></article><article class="idx-card" data-search="sermorelin gh axis · recovery sermorelin signals your pituitary to release more of your own growth hormone, which is why it has become popular for sleep, recovery, body composition and healthy-aging goals." data-human="4" data-gap="CONTEXT-DEPENDENT" data-status="historical fda product / current context varies" data-outcome="gh axis · recovery"><div class="idx-top"><span class="idx-name">Sermorelin</span><span class="idx-arrow">↗</span></div><p class="idx-deck"><b class="plain-label">IN PLAIN ENGLISH</b>Sermorelin signals your pituitary to release more of your own growth hormone, which is why it has become popular for sleep, recovery, body composition and healthy-aging goals.</p><div class="idx-metrics"><div><span>Human Evidence</span><b>●●●●○</b></div><div><span>The Gap</span><b class="gaptext">CONTEXT-DEPENDENT</b></div></div><div class="idx-foot"><span>GH Axis · Recovery</span><span>Historical FDA product / current context varies</span></div><a class="idx-link" href="/sermorelin.html" aria-label="Open Sermorelin evidence profile"></a></article><article class="idx-card" data-search="epitalon longevity · cellular aging epitalon is being studied for its effects on cellular aging signals—including telomerase and telomeres—which is why it has become one of the most talked-about peptides in longevity circles." data-human="2" data-gap="WIDE" data-status="investigational" data-outcome="longevity · cellular aging"><div class="idx-top"><span class="idx-name">Epitalon</span><span class="idx-arrow">↗</span></div><p class="idx-deck"><b class="plain-label">IN PLAIN ENGLISH</b>Epitalon is being studied for its effects on cellular aging signals—including telomerase and telomeres—which is why it has become one of the most talked-about peptides in longevity circles.</p><div class="idx-metrics"><div><span>Human Evidence</span><b>●●○○○</b></div><div><span>The Gap</span><b class="gaptext">WIDE</b></div></div><div class="idx-foot"><span>Longevity · Cellular Aging</span><span>Investigational</span></div><a class="idx-link" href="/epitalon.html" aria-label="Open Epitalon evidence profile"></a></article><article class="idx-card" data-search="cibinetide / ara-290 neuropathy · tissue protection cibinetide is designed to switch on the body’s tissue-protection and repair signaling without the blood-building effects of erythropoietin, making it especially interesting for nerve damage, neuropathic symptoms and inflammation." data-human="4" data-gap="MODERATE" data-status="investigational" data-outcome="neuropathy · tissue protection"><div class="idx-top"><span class="idx-name">Cibinetide / ARA-290</span><span class="idx-arrow">↗</span></div><p class="idx-deck"><b class="plain-label">IN PLAIN ENGLISH</b>Cibinetide is designed to switch on the body’s tissue-protection and repair signaling without the blood-building effects of erythropoietin, making it especially interesting for nerve damage, neuropathic symptoms and inflammation.</p><div class="idx-metrics"><div><span>Human Evidence</span><b>●●●●○</b></div><div><span>The Gap</span><b class="gaptext">MODERATE</b></div></div><div class="idx-foot"><span>Neuropathy · Tissue Protection</span><span>Investigational</span></div><a class="idx-link" href="/cibinetide-ara-290.html" aria-label="Open Cibinetide / ARA-290 evidence profile"></a></article></div><div class="adjacent-core"><div class="num">CORE ADJACENT PROFILE · NON-PEPTIDE</div><h3>NAD+</h3><p><b>IN PLAIN ENGLISH</b> NAD+ is essential to how your cells produce and manage energy, which is why supporting NAD+ biology has become such a major focus in energy, recovery and longevity.</p><a href="/nad-plus.html"><strong>Open NAD+ evidence profile →</strong></a></div></div></section>
 
 <section class="blends-section"><div class="wrap">
 <div class="blends-head"><div><div class="num">02 / BLENDS</div><h2>When compounds become combinations.</h2></div>
@@ -358,7 +261,7 @@ h1{font:700 clamp(62px,9vw,122px)/.84 var(--serif);letter-spacing:-.065em;margin
 <div class="num">03 / FULL PEPTIDE INDEX</div>
 <div class="index-head">
   <h2>Explore the broader library.</h2>
-  <p><strong>51 peptides + NAD+ + 2 community blends tracked.</strong> The seven flagship profiles above are our deepest evidence reviews. We also include select adjacent biohacking compounds when they are important to how people actually research the space. NAD+ is labeled separately because it is not a peptide.</p>
+  <p><strong>51 peptides + NAD+ + 2 community blends tracked.</strong> The fourteen flagship profiles above are our deepest evidence reviews. We also include select adjacent biohacking compounds when they are important to how people actually research the space. NAD+ is labeled separately because it is not a peptide.</p>
 </div>
 <div class="library-tools">
   <div style="grid-column:1/-1;font-size:12px;line-height:1.5;color:#66635d;margin-bottom:2px">The Peptide Index also surfaces a small number of important adjacent compounds. These are clearly labeled when they are not peptides.</div>
