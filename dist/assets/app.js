@@ -673,8 +673,8 @@ renderProfileV6 = function(slug) {
       const block = document.createElement('section');
       block.className = 'profile-plain-english';
 
-      block.style.cssText =
-        'border:1px solid var(--line);padding:24px;margin:28px 0;background:#fbf8f2;';
+     block.style.cssText =
+  'box-sizing:border-box;border:1px solid #171816;padding:28px 32px;margin:28px auto 0;background:#fff;width:calc(100% - 48px);max-width:1420px;';
 
       block.innerHTML =
         '<div class="kicker">IN PLAIN ENGLISH</div>' +
