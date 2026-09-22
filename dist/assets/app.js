@@ -682,14 +682,11 @@ renderProfileV6 = function(slug) {
         safe(plainEnglish) +
         '</p>';
 
-      const provenance = profile.querySelector('.provenance');
+  const hero = profile.querySelector('.inner-hero');
 
-      if (provenance) {
-        provenance.insertAdjacentElement('afterend', block);
-      } else {
-        const hero = profile.querySelector('.inner-hero');
-        if (hero) hero.insertAdjacentElement('afterend', block);
-      }
+if (hero) {
+  hero.appendChild(block);
+}
     })
     .catch(error => {
       console.warn('Plain English profile fix:', error);
