@@ -632,33 +632,26 @@ route=function(){
 
 
 /* Editorial hubs now use real static routes (/science/, /evolution/, /future/) to avoid legacy hash-router conflicts. */
-/* ---- V21.1 · Profile "In Plain English" bridge ---- */
+/* ---- V21.1 · In Plain English · production profile fix ---- */
 
-const _plainEnglishRoute = route;
+const _v211RenderProfile = renderProfileV6;
 
-route = function () {
-  const parsed = parseHash();
-
-  _plainEnglishRoute();
-
-  if (!parsed.path.startsWith('/peptide/')) return;
-
-  const slug = parsed.path.split('/peptide/')[1];
-  if (!slug) return;
+renderProfileV6 = function(slug) {
+  _v211RenderProfile(slug);
 
   const profile = document.getElementById('profileView');
   if (!profile || profile.querySelector('.profile-plain-english')) return;
 
   fetch('/peptides.html')
-    .then(r => {
-      if (!r.ok) throw new Error('Unable to load Peptide Index');
-      return r.text();
+    .then(response => {
+      if (!response.ok) throw new Error('Unable to load Peptide Index');
+      return response.text();
     })
     .then(html => {
       const doc = new DOMParser().parseFromString(html, 'text/html');
 
       const row = Array.from(doc.querySelectorAll('.library-row')).find(row => {
-        const link = row.querySelector('a[href]');
+        const link = row.querySelector('a[href*="/peptide/"]');
         if (!link) return false;
 
         const href = link.getAttribute('href') || '';
@@ -679,8 +672,9 @@ route = function () {
 
       const block = document.createElement('section');
       block.className = 'profile-plain-english';
+
       block.style.cssText =
-        'border:1px solid var(--line);padding:24px;margin:0 0 28px;background:#fbf8f2;';
+        'border:1px solid var(--line);padding:24px;margin:28px 0;background:#fbf8f2;';
 
       block.innerHTML =
         '<div class="kicker">IN PLAIN ENGLISH</div>' +
@@ -693,9 +687,11 @@ route = function () {
       if (provenance) {
         provenance.insertAdjacentElement('afterend', block);
       } else {
-        const prose = profile.querySelector('.prose');
-        if (prose) prose.insertAdjacentElement('afterbegin', block);
+        const hero = profile.querySelector('.inner-hero');
+        if (hero) hero.insertAdjacentElement('afterend', block);
       }
     })
-    .catch(err => console.warn('Plain English bridge:', err));
+    .catch(error => {
+      console.warn('Plain English profile fix:', error);
+    });
 };
