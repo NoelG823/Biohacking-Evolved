@@ -634,71 +634,68 @@ route=function(){
 /* Editorial hubs now use real static routes (/science/, /evolution/, /future/) to avoid legacy hash-router conflicts. */
 /* ---- V21.1 · Profile "In Plain English" bridge ---- */
 
-(function () {
-  const originalRenderProfile = renderProfile;
+const _plainEnglishRoute = route;
 
-  renderProfile = function (slug) {
-    originalRenderProfile(slug);
+route = function () {
+  const parsed = parseHash();
 
-    const profile = document.getElementById('profileView');
-    if (!profile) return;
+  _plainEnglishRoute();
 
-    // Prevent duplicate insertion if the route renders more than once.
-    if (profile.querySelector('.profile-plain-english')) return;
+  if (!parsed.path.startsWith('/peptide/')) return;
 
-    fetch('/peptides.html')
-      .then(response => {
-        if (!response.ok) throw new Error('Unable to load Peptide Index');
-        return response.text();
-      })
-      .then(html => {
-        const doc = new DOMParser().parseFromString(html, 'text/html');
+  const slug = parsed.path.split('/peptide/')[1];
+  if (!slug) return;
 
-        const link = Array.from(
-          doc.querySelectorAll('.library-main[href]')
-        ).find(a => {
-          const href = a.getAttribute('href') || '';
-          return href === '/#/peptide/' + slug ||
-                 href === '#/peptide/' + slug;
-        });
+  const profile = document.getElementById('profileView');
+  if (!profile || profile.querySelector('.profile-plain-english')) return;
 
-        if (!link) return;
+  fetch('/peptides.html')
+    .then(r => {
+      if (!r.ok) throw new Error('Unable to load Peptide Index');
+      return r.text();
+    })
+    .then(html => {
+      const doc = new DOMParser().parseFromString(html, 'text/html');
 
-        const row = link.closest('.library-row');
-        const source = row && row.querySelector('.library-plain');
-        if (!source) return;
+      const row = Array.from(doc.querySelectorAll('.library-row')).find(row => {
+        const link = row.querySelector('a[href]');
+        if (!link) return false;
 
-        const clone = source.cloneNode(true);
-        const label = clone.querySelector('span');
-        if (label) label.remove();
-
-        const plainEnglish = clone.textContent.trim();
-        if (!plainEnglish) return;
-
-        const block = document.createElement('div');
-        block.className = 'callout profile-plain-english';
-        block.innerHTML =
-          '<div class="kicker" style="color:#b7c0c4">In Plain English</div>' +
-          '<p>' + safe(plainEnglish) + '</p>';
-
-        /*
-         * Put it near the top of the profile, immediately before
-         * the first major profile section when possible.
-         */
-        const prose = profile.querySelector('.prose');
-
-        if (prose) {
-          const firstHeading = prose.querySelector('h2');
-
-          if (firstHeading) {
-            firstHeading.insertAdjacentElement('beforebegin', block);
-          } else {
-            prose.insertAdjacentElement('afterbegin', block);
-          }
-        }
-      })
-      .catch(error => {
-        console.warn('Plain English profile bridge:', error);
+        const href = link.getAttribute('href') || '';
+        return href.includes('/peptide/' + slug);
       });
-  };
-})();
+
+      if (!row) return;
+
+      const source = row.querySelector('.library-plain');
+      if (!source) return;
+
+      const clone = source.cloneNode(true);
+      const label = clone.querySelector('span');
+      if (label) label.remove();
+
+      const plainEnglish = clone.textContent.trim();
+      if (!plainEnglish) return;
+
+      const block = document.createElement('section');
+      block.className = 'profile-plain-english';
+      block.style.cssText =
+        'border:1px solid var(--line);padding:24px;margin:0 0 28px;background:#fbf8f2;';
+
+      block.innerHTML =
+        '<div class="kicker">IN PLAIN ENGLISH</div>' +
+        '<p style="font-size:18px;line-height:1.55;margin:10px 0 0;">' +
+        safe(plainEnglish) +
+        '</p>';
+
+      const provenance = profile.querySelector('.provenance');
+
+      if (provenance) {
+        provenance.insertAdjacentElement('afterend', block);
+      } else {
+        const prose = profile.querySelector('.prose');
+        if (prose) prose.insertAdjacentElement('afterbegin', block);
+      }
+    })
+    .catch(err => console.warn('Plain English bridge:', err));
+};
