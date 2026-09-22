@@ -632,4 +632,73 @@ route=function(){
 
 
 /* Editorial hubs now use real static routes (/science/, /evolution/, /future/) to avoid legacy hash-router conflicts. */
+/* ---- V21.1 · Profile "In Plain English" bridge ---- */
 
+(function () {
+  const originalRenderProfile = renderProfile;
+
+  renderProfile = function (slug) {
+    originalRenderProfile(slug);
+
+    const profile = document.getElementById('profileView');
+    if (!profile) return;
+
+    // Prevent duplicate insertion if the route renders more than once.
+    if (profile.querySelector('.profile-plain-english')) return;
+
+    fetch('/peptides.html')
+      .then(response => {
+        if (!response.ok) throw new Error('Unable to load Peptide Index');
+        return response.text();
+      })
+      .then(html => {
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+
+        const link = Array.from(
+          doc.querySelectorAll('.library-main[href]')
+        ).find(a => {
+          const href = a.getAttribute('href') || '';
+          return href === '/#/peptide/' + slug ||
+                 href === '#/peptide/' + slug;
+        });
+
+        if (!link) return;
+
+        const row = link.closest('.library-row');
+        const source = row && row.querySelector('.library-plain');
+        if (!source) return;
+
+        const clone = source.cloneNode(true);
+        const label = clone.querySelector('span');
+        if (label) label.remove();
+
+        const plainEnglish = clone.textContent.trim();
+        if (!plainEnglish) return;
+
+        const block = document.createElement('div');
+        block.className = 'callout profile-plain-english';
+        block.innerHTML =
+          '<div class="kicker" style="color:#b7c0c4">In Plain English</div>' +
+          '<p>' + safe(plainEnglish) + '</p>';
+
+        /*
+         * Put it near the top of the profile, immediately before
+         * the first major profile section when possible.
+         */
+        const prose = profile.querySelector('.prose');
+
+        if (prose) {
+          const firstHeading = prose.querySelector('h2');
+
+          if (firstHeading) {
+            firstHeading.insertAdjacentElement('beforebegin', block);
+          } else {
+            prose.insertAdjacentElement('afterbegin', block);
+          }
+        }
+      })
+      .catch(error => {
+        console.warn('Plain English profile bridge:', error);
+      });
+  };
+})();
