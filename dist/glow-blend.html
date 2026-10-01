@@ -59,8 +59,26 @@ h1{font:700 clamp(62px,9vw,122px)/.84 var(--serif);letter-spacing:-.065em;margin
 
 .plain{margin:26px 0 0;padding:20px 22px;border:1px solid var(--ink);background:var(--white)}.plain .k,.blendtag{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:700}.plain p{font:400 20px/1.35 var(--serif);margin:7px 0 0}
 .formula{margin:22px 0 0;font:600 15px/1.5 var(--sans);letter-spacing:.03em} .formula span{display:inline-block;border:1px solid var(--line);padding:8px 12px;margin:4px 4px 4px 0;background:var(--white)}
+
+/* Community Protocol Signal */
+.protocol-card{margin-top:4px;border:1px solid var(--ink);background:var(--white)}
+.protocol-amount{padding:34px 36px 30px;background:var(--paper2);border-bottom:1px solid var(--ink)}
+.protocol-amount .label,.protocol-mini .label{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.protocol-amount .dose{font:700 clamp(48px,7vw,78px)/.92 var(--serif);letter-spacing:-.045em;margin:10px 0 8px}
+.protocol-amount .sub{font:700 15px/1.3 var(--sans);margin:0 0 14px}
+.protocol-amount p{font-size:14px!important;max-width:680px;margin:0!important;color:#4f504b}
+.protocol-meta{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}
+.protocol-mini{padding:24px;border-right:1px solid var(--line)}.protocol-mini:last-child{border-right:0}
+.protocol-mini strong{display:block;font:700 25px/1.05 var(--serif);margin:8px 0 9px}
+.protocol-mini p{font-size:13px!important;margin:0!important;color:#50514c}
+.protocol-consistency{display:flex;gap:24px;align-items:center;padding:20px 24px;border-bottom:1px solid var(--line)}
+.protocol-consistency b{font:700 20px var(--serif)}
+.protocol-consistency span{font-size:12px;color:var(--muted)}
+.protocol-science{padding:26px 28px}.protocol-science p{font-size:14px!important;margin:8px 0 0!important}
+.protocol-rule{margin-top:18px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+@media(max-width:850px){.protocol-meta{grid-template-columns:1fr}.protocol-mini{border-right:0;border-bottom:1px solid var(--line)}.protocol-mini:last-child{border-bottom:0}.protocol-amount{padding:28px 24px}.protocol-consistency{display:block}.protocol-consistency span{display:block;margin-top:6px}}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "GLOW Blend: GHK-Cu + BPC-157 + TB-500 Evidence Profile", "mainEntityOfPage": "https://biohackingevolved.com/glow-blend.html", "datePublished": "2026-09-21", "dateModified": "2026-09-21", "author": {"@type": "Organization", "name": "BIOHACKING. EVOLVED."}, "publisher": {"@type": "Organization", "name": "BIOHACKING. EVOLVED."}, "about": [{"@type": "Thing", "name": "GHK-Cu"}, {"@type": "Thing", "name": "BPC-157"}, {"@type": "Thing", "name": "TB-500"}]}</script></head><body>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "GLOW Blend: GHK-Cu + BPC-157 + TB-500 Evidence Profile", "mainEntityOfPage": "https://biohackingevolved.com/glow-blend.html", "datePublished": "2026-09-21", "dateModified":"2026-09-30", "author": {"@type": "Organization", "name": "BIOHACKING. EVOLVED."}, "publisher": {"@type": "Organization", "name": "BIOHACKING. EVOLVED."}, "about": [{"@type": "Thing", "name": "GHK-Cu"}, {"@type": "Thing", "name": "BPC-157"}, {"@type": "Thing", "name": "TB-500"}]}</script></head><body>
 <header class="top"><div class="wrap nav"><a class="brand" href="/">BIOHACKING. EVOLVED.</a><a class="active" href="/peptides.html">Peptides</a><a href="/#/goals">Goals</a><a href="/science.html">The Science</a><a href="/#/compare">Compare</a><a href="/community-pulse.html">Community Pulse</a><a href="/what-changed.html">What Changed?</a></div></header>
 <main>
 <section class="hero"><div class="wrap"><div class="eyebrow">The Peptide Index · BLEND · Updated September 2026</div><div class="hero-grid"><div>
@@ -118,20 +136,37 @@ h1{font:700 clamp(62px,9vw,122px)/.84 var(--serif);letter-spacing:-.065em;margin
 
 <section class="section"><div class="wrap section-grid"><div><div class="num">07 / THE GAP</div><h2>VERY WIDE</h2></div><div class="copy"><div class="gap"><div class="eyebrow">Clinical Evidence × Community Signal</div><strong>VERY WIDE</strong><p>The individual ingredients create an unusually compelling mechanistic story around repair and remodeling. The finished blend, however, has essentially none of the controlled human evidence needed to determine whether those mechanisms translate into better recovery, skin, hair or tissue outcomes when used together.</p></div></div></div></section>
 
-<section class="section"><div class="wrap section-grid"><div><div class="num">08 / SAFETY + REGULATORY</div><h2>Three components also mean three layers of uncertainty.</h2></div><div class="copy">
+
+<section class="section"><div class="wrap section-grid">
+<div><div class="num">08 / COMMUNITY PROTOCOL SIGNAL</div><h2>What people are actually reporting.</h2></div>
+<div class="copy">
+<p class="big">Recurring community-use patterns are visible around GLOW Blend. We document those patterns here without turning them into a clinical recommendation.</p>
+<div class="protocol-card">
+<div class="protocol-amount">
+<div class="label">GLOW Blend · Commonly reported amount</div>
+<div class="dose">NO SINGLE BLEND STANDARD</div>
+<div class="sub">GHK-Cu + BPC-157 + TB-500 ratios vary by product</div>
+<p>“GLOW” generally refers to combining GHK-Cu, BPC-157 and TB-500, but there is no universal formula. Commercial and community blends use different component ratios, so a total milligram amount is not meaningful without the exact composition.</p>
+</div>
+<div class="protocol-meta"><div class="protocol-mini"><div class="label">Route</div><strong>Subcutaneous</strong><p>Injection is the dominant community pattern for premixed GLOW products. GHK-Cu also has a distinct topical-use history that should not be conflated with injectable blends.</p></div><div class="protocol-mini"><div class="label">Frequency</div><strong>Often daily</strong><p>Premixed blends are frequently discussed as daily injections, even though the component peptides are often used on different schedules when administered separately.</p></div><div class="protocol-mini"><div class="label">Duration</div><strong>Several weeks to months</strong><p>Community cycles vary widely depending on whether the goal is framed as recovery, skin/hair changes or both.</p></div></div>
+<div class="protocol-consistency"><b>Community consistency: LOW</b><span>The three-component concept is recognizable; ratios, total amount, frequency and duration vary too much to call one protocol standard.</span></div>
+<div class="protocol-science"><div class="eyebrow">What the science says</div><p><strong>No clinically established dosing protocol exists for the GHK-Cu + BPC-157 + TB-500 combination.</strong> The blend has not been validated in controlled human trials, and evidence for individual components cannot establish the safety, efficacy or optimal ratio of the combination.</p>
+<div class="protocol-rule"><strong>How to read this:</strong> Community Protocol Signals document recurring experimental-use patterns observed across public discussions. They describe what people report doing—not what BIOHACKING. EVOLVED. recommends an individual take.</div>
+</div></div></div></div></section>
+<section class="section"><div class="wrap section-grid"><div><div class="num">09 / SAFETY + REGULATORY</div><h2>Three components also mean three layers of uncertainty.</h2></div><div class="copy">
 <p>FDA's current compounding safety information separately flags BPC-157, TB-500 and injectable GHK-Cu for safety-data limitations and potential concerns involving immunogenicity, aggregation and/or peptide-related impurities. FDA says it has not identified human exposure data for TB-500 drug products and has only limited human data informing injectable GHK-Cu safety.</p>
 <p>BPC-157-related and TB-500-related substances were reviewed at FDA's July 2026 Pharmacy Compounding Advisory Committee meeting. GHK-Cu for non-injectable routes remains a distinct compounding-policy question; route and formulation should not be blurred together.</p>
 <div class="callout"><strong>Combination uncertainty matters.</strong> Even complete safety profiles for three individual ingredients would not automatically establish the safety, stability or interaction profile of a co-formulated blend.</div>
 </div></div></section>
 
-<section class="section"><div class="wrap section-grid"><div><div class="num">09 / EVIDENCE LEDGER</div><h2>What supports the profile.</h2></div><div class="copy"><table class="ledger"><thead><tr><th>Evidence</th><th>Type</th><th>What it adds</th><th>What it cannot prove</th></tr></thead><tbody>
+<section class="section"><div class="wrap section-grid"><div><div class="num">10 / EVIDENCE LEDGER</div><h2>What supports the profile.</h2></div><div class="copy"><table class="ledger"><thead><tr><th>Evidence</th><th>Type</th><th>What it adds</th><th>What it cannot prove</th></tr></thead><tbody>
 <tr><td>1992 · PMID 1522753</td><td>GHK-Cu human fibroblast culture</td><td>Supports extracellular-matrix/glycosaminoglycan remodeling biology.</td><td>Does not establish injectable GLOW efficacy.</td></tr>
 <tr><td>2025 · PMID 40131143</td><td>BPC-157 human pilot; n=2</td><td>Short-term IV safety observations in two participants.</td><td>Does not establish recovery or combination efficacy.</td></tr>
 <tr><td>FDA · 2026 TB-500 review</td><td>Regulatory evidence review</td><td>Distinguishes TB-500 from full-length thymosin beta-4 and reports no identified human exposure studies for TB-500.</td><td>Does not establish GLOW efficacy.</td></tr>
 <tr><td>FDA · Current safety-risk page</td><td>Compounding safety context</td><td>Separately identifies uncertainties for BPC-157, TB-500 and injectable GHK-Cu.</td><td>Does not directly study the three-component blend.</td></tr>
 </tbody></table></div></div></section>
 
-<section class="section"><div class="wrap section-grid"><div><div class="num">10 / PRIMARY SOURCES</div><h2>Read deeper.</h2></div><div class="copy sources">
+<section class="section"><div class="wrap section-grid"><div><div class="num">11 / PRIMARY SOURCES</div><h2>Read deeper.</h2></div><div class="copy sources">
 <a href="https://pubmed.ncbi.nlm.nih.gov/1522753/" target="_blank" rel="noopener">1992 · GHK-Cu and human fibroblast matrix biology · PMID 1522753 ↗</a>
 <a href="https://pubmed.ncbi.nlm.nih.gov/40131143/" target="_blank" rel="noopener">2025 · BPC-157 human IV pilot · PMID 40131143 ↗</a>
 <a href="https://www.fda.gov/media/193349/download" target="_blank" rel="noopener">FDA · 2026 TB-500 evidence and safety review ↗</a>
@@ -139,11 +174,11 @@ h1{font:700 clamp(62px,9vw,122px)/.84 var(--serif);letter-spacing:-.065em;margin
 <a href="https://www.fda.gov/advisory-committees/advisory-committee-calendar/july-23-24-2026-meeting-pharmacy-compounding-advisory-committee-07232026" target="_blank" rel="noopener">FDA · July 2026 Pharmacy Compounding Advisory Committee ↗</a>
 </div></div></section>
 
-<section class="section"><div class="wrap section-grid"><div><div class="num">11 / KEEP EXPLORING</div><h2>Take the blend apart.</h2></div><div class="copy"><div class="signal-grid">
+<section class="section"><div class="wrap section-grid"><div><div class="num">12 / KEEP EXPLORING</div><h2>Take the blend apart.</h2></div><div class="copy"><div class="signal-grid">
 <div class="panel"><div class="eyebrow">Foundation Blend</div><h3>Wolverine</h3><p>See the BPC-157 + TB-500 recovery combination before GHK-Cu is added.</p><p><a href="/wolverine-blend.html"><strong>Open Wolverine →</strong></a></p></div>
 <div class="panel"><div class="eyebrow">Component</div><h3>GHK-Cu</h3><p>Explore the collagen, tissue-remodeling and route-specific evidence behind GLOW's third component.</p><p><a href="/ghk-cu.html"><strong>Open GHK-Cu →</strong></a></p></div>
 <div class="panel"><div class="eyebrow">Outcome Hub</div><h3>Recovery</h3><p>Compare the blend with the broader repair landscape and evidence hierarchy.</p><p><a href="/recovery.html"><strong>Explore Recovery →</strong></a></p></div>
 </div></div></div></section>
 
-<div class="wrap disclaimer"><strong>Editorial note:</strong> BIOHACKING. EVOLVED. is an educational publication, not a medical provider. This profile describes research and community behavior; it does not provide dosing, sourcing, treatment or combination guidance.</div>
+<div class="wrap disclaimer"><strong>Editorial note:</strong> BIOHACKING. EVOLVED. is an educational publication, not a medical provider. This profile describes research and community behavior; it does not provide dosing recommendations, sourcing, treatment or combination guidance.</div>
 </main><footer class="footer"><div class="wrap"><strong>BIOHACKING. EVOLVED.</strong><p>The science behind the next generation of human optimization. Research the science. Track the community. Separate signal from hype.</p></div></footer></body></html>
